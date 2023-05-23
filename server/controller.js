@@ -9,7 +9,6 @@ const randomizeChords = (arr) => {
         let randomArr = arr[randomIndex]
         let randomChord = Math.floor(Math.random() * randomArr.length)
         chordProgression.push(randomArr[randomChord])
-
         counter++
     }
     return chordProgression
