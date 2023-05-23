@@ -159,18 +159,18 @@ p{
     line-height: calc(1rem + 1vw);
 }
 
-#generate-link{
+#generate-button{
     border-radius: 5px;
     padding: 10px 20px;
-    color: var(--color1);
+    background-color: var(--color1);
+    color: black;
+    border-color: black;
     cursor: pointer;
     font-size: larger;
-    text-decoration: none;
 }
 
-#generate-link:hover {
-    color: var(--color3);
-    text-decoration: underline;
+#generate-button:hover {
+    background-color: var(--color3);
     
 }
 
@@ -178,6 +178,3 @@ p{
     background-color: var(--black);
     
 }
-
-
-
