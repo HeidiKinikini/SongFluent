@@ -9,17 +9,18 @@
 
 body, html {
     height: 100%;
+    background-color: var(--color3);
 }
 :root{
-    --color5: #94BFA7;
-    --color4: #E0B7B7;
-    --color3: #DC7F9B;
-    --color2: #2F2F2F;
-    --color1: #F7A1C4;
+    --color5: #F6F7F8;
+    --color4: #20A4F3;
+    --color3: #2EC4B6;
+    --color2: #011627;
+    --color1: #FF3366;
     --opaqueblack: rgba(0, 0, 0, 0.8);
  
     --titlefont:  calc(.5rem + 2vw);
-    --pagefont: calc(.1rem + 2vw);
+    --pagefont: calc(.3rem + 2vw);
     --ptext: calc(16px + .5vw);
 
 }
@@ -96,12 +97,13 @@ nav{
 font-size: var(--ptext);
 color: white;
 background-color: var(--opaqueblack);
-width:80vw;
-height: 50vh;
+width:90vw;
+height: 20rem;
 display: flex;
 justify-content: center;
 flex-direction: column;
 align-items: center;
+flex-wrap: nowrap;
 gap: 10px;
 border-radius: 5px;
 text-align: justify;
@@ -178,3 +180,57 @@ p{
     background-color: var(--black);
     
 }
+.output{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    
+}
+.card{
+    height: calc(4rem + 6vw);
+    width: calc(4rem + 6vw);
+    background-color: var(--color1);
+    margin: calc(.1rem + 1vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Josefin Sans';
+    font-size: var(--pagefont);
+    padding: 5px;
+    border: 2px solid var(--color5);
+    
+
+}
+
+select{
+    width: 10rem;
+    background-color: var(--color2);
+    color: var(--color5);
+    border: 2px solid var(--color5);
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+input{
+    padding: 5px;
+    border: 2px solid var(--color5);
+    color: var(--color5);
+    background-color: var(--color2);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input:hover{
+    background-color: var(--color3);
+}
+
+
+
+
+
+

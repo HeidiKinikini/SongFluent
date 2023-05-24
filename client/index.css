@@ -11,11 +11,11 @@ body, html {
     height: 100%;
 }
 :root{
-    --color5: #94BFA7;
-    --color4: #E0B7B7;
-    --color3: #DC7F9B;
-    --color2: #2F2F2F;
-    --color1: #F7A1C4;
+    --color5: #F6F7F8;
+    --color4: #20A4F3;
+    --color3: #2EC4B6;
+    --color2: #011627;
+    --color1: #FF3366;
     --opaqueblack: rgba(0, 0, 0, 0.8);
  
     --titlefont:  calc(.5rem + 2vw);
@@ -114,6 +114,7 @@ top: 15rem;
 .header-text{
     font-family: 'Josefin Sans';
     background-color: var(--color5);
+    color: var(--color2);
     padding: 1rem;
     width: 100%;
     border-radius: 10px;

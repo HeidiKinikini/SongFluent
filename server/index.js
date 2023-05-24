@@ -3,13 +3,14 @@ const cors = require('cors')
 
 const {PORT} = require('dotenv').config()
 
+const {randomizeChords} = require('./controller')
 const app = express()
 
 
 app.use(express.json())
 app.use(cors())
 
-
+app.get(`/api/getScales/:scale`, randomizeChords)
 
 
 
