@@ -172,7 +172,7 @@ p{
 }
 
 #generate-button:hover {
-    background-color: var(--color3);
+    text-decoration: underline;
     
 }
 
@@ -202,6 +202,8 @@ p{
     font-size: var(--pagefont);
     padding: 5px;
     border: 2px solid var(--color5);
+    position: relative;
+    
     
 
 }
@@ -228,6 +230,29 @@ input{
 input:hover{
     background-color: var(--color3);
 }
+
+.delete-button{
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    position: relative;
+    height: auto;
+    width: auto;
+    font-size: var(--pagefont);
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin: 5px;
+    cursor: pointer;
+    color: var(--color5);
+
+}
+.delete-button:hover{
+    color: grey;
+}
+   
+
+
 
 
 

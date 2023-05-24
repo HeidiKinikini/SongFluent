@@ -2,8 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
-    
 }
 
 
@@ -32,7 +30,7 @@ body, html {
 }
 
 .content{
-    color: var(--pagetitle);
+    color: var(--color5);
     width: 100vw;
     position: relative;
     z-index: 400;
@@ -43,7 +41,7 @@ body, html {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     z-index: 300;
 }
 nav{
@@ -108,8 +106,6 @@ text-align: justify;
 padding: 1rem;
 position: absolute;
 top: 15rem;
-
-
 }
 .header-text{
     font-family: 'Josefin Sans';
@@ -170,7 +166,7 @@ p{
 }
 
 #generate-link:hover {
-    color: var(--color3);
+    
     text-decoration: underline;
     
 }

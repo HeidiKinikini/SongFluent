@@ -7,22 +7,12 @@ module.exports = {
 
 
 
-     randomizeChords: (req, res) => {
+     getScale: (req, res) => {
     
         const {scale} = req.params
           let pickedScale = Scales[scale]
-        
-        
-        let counter = 0
-        let chordProgression = []
-        while(counter < 4) {
-            let randomIndex = Math.floor(Math.random() * pickedScale.length)
-            let randomArr = pickedScale[randomIndex]
-            let randomChord = Math.floor(Math.random() * randomArr.length)
-            chordProgression.push(randomArr[randomChord])
-            counter++
-        }
-        res.status(200).send(chordProgression)
+
+        res.status(200).send(pickedScale)
     },
     
      chooseGenre: (req, res) => {
