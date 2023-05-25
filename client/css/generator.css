@@ -98,7 +98,7 @@ font-size: var(--ptext);
 color: white;
 background-color: var(--opaqueblack);
 width:90vw;
-height: 20rem;
+height: auto;
 display: flex;
 justify-content: center;
 flex-direction: column;
@@ -184,7 +184,8 @@ p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    margin-top: calc(--ptext);
 
     
 }
@@ -250,7 +251,45 @@ input:hover{
 .delete-button:hover{
     color: grey;
 }
-   
+
+
+
+.add-chord-text {
+    color: var(--color5);
+    font-size: var(--titlefont);
+    font-family: 'Josefin Sans';
+
+}
+
+.choose-key-text {
+    color: var(--color5);
+    font-size: var(--titlefont);
+    font-family: 'Josefin Sans';
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+#form-container{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: calc(2.5rem + 2vw);
+border-radius: 10px;
+padding: calc(2.5rem + 2vw);
+}
+#clear-all{
+    padding: 5px;
+    border: 2px solid var(--color5);
+    color: var(--color5);
+    background-color: var(--color2);
+    cursor: pointer;
+    border-radius: 5px;
+}
 
 
 

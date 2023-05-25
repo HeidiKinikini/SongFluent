@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="generator.css">
+    <link rel="stylesheet" href="./css/generator.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
@@ -26,34 +26,48 @@
             <div class="links">
                 <a class="link" href="index.html">Home</a>
                 <a class="link" href="generator.html">Generator</a>
+                <a class="link" href="scales.html">Saved</a>
             </div>
             
         </nav>
         <div class="flex-header">  
             
             <section id="about">
-                <form id="dropdown">
-                    <select name="scales" id="scales">
-                        <option name="scales" value="cMajScale">C Major</option>
-                        <option name="scales" value="gMajScale">G Major</option>
-                        <option name="scales" value="fMajScale">F Major</option>
-                        <option name="scales" value="aMajScale">A Major</option>
-                        <option name="scales" value="bMajScale">B Major</option>
-                        <option name="scales" value="dMajScale">D Major</option>
-                        <option name="scales" value="eMajScale">E Major</option>
-                    </select>
-
-                    <select name="addChord" id="addChord">
-                        
-                    </select>
-
-                    <input type="submit">
-
+                <div id="form-container">
                     
+                    <form id="dropdown">
+                        <h2 class="choose-key-text">Choose Key</h2>
+                        
+                        <select name="scales" id="scales">
+                            <option name="scales" value="cMajScale">C Major</option>
+                            <option name="scales" value="gMajScale">G Major</option>
+                            <option name="scales" value="fMajScale">F Major</option>
+                            <option name="scales" value="aMajScale">A Major</option>
+                            <option name="scales" value="bMajScale">B Major</option>
+                            <option name="scales" value="dMajScale">D Major</option>
+                            <option name="scales" value="eMajScale">E Major</option>
+                        </select>
+                        
+                        
+                        <input class="key-submit" type="submit">
+                    </form>
 
-                </form>
-                <div class="output" id="output"></div>
+                    <form id="second-form">
 
+                        <h2 class="add-chord-text">Add Chord</h2>
+
+                        <select name="addChord" id="addChord"></select>
+        
+                        <input class="chord-submit" type="submit">
+                        
+                    </form>
+                </div>
+                
+                <button id="clear-all">Clear All</button>
+                <div class="output" id="output">
+
+                </div>
+                
             </section>
             </div>
         </div>
@@ -70,5 +84,5 @@
             
         </section>
     </body>
-    <script src="index.js"></script>
+    <script src="./javascript/index.js"></script>
 </html>

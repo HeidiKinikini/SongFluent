@@ -1,20 +1,12 @@
 
+const dropDwn2 = document.getElementById('second-form')
 const addChord = document.getElementById('addChord')
 const dropDwn = document.getElementById('dropdown');
-const output = document.getElementById('output')
+const output = document.getElementById('output');
+const clearAll = document.getElementById('clear-all')
 
 
-const createCard = (chord) => {
-    let card = document.createElement('div')
-    card.classList.add('card')
-    card.textContent = chord
-    output.appendChild(card)
-    const deleteBtn = document.createElement('button')
-    deleteBtn.textContent = 'X'
-    deleteBtn.addEventListener('click', deleteChord)
-    card.appendChild(deleteBtn)
-    deleteBtn.classList.add('delete-button')
-}
+
 
 const deleteChord = (e) => {
     e.preventDefault();
@@ -25,7 +17,7 @@ function randomizeChords (e) {
     output.textContent =''
     addChord.textContent=''
     let selected = document.getElementById('scales').value 
-    console.log(addChord)
+    
     
     axios.get(`http://localhost:4000/api/getScales/${selected}`)
     .then(res => {
@@ -39,6 +31,7 @@ function randomizeChords (e) {
         
          }
         })
+
 
         let counter = 0
         let chordProgression = []
@@ -59,7 +52,34 @@ function randomizeChords (e) {
 
 }
 
+function addNewChord(e) {
+    e.preventDefault()
+    createCard(addChord.value)
+    
 
+    
+}
+
+function clearAllChords() {
+    output.textContent = ''
+}
+
+const createCard = (chord) => {
+    let card = document.createElement('div')
+    card.classList.add('card')
+    card.textContent = chord
+    output.appendChild(card)
+    card.setAttribute('id', 'card')
+    const deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'X'
+    deleteBtn.addEventListener('click', deleteChord)
+    card.appendChild(deleteBtn)
+    deleteBtn.classList.add('delete-button')
+}
+
+
+clearAll.addEventListener('click', clearAllChords)
+dropDwn2.addEventListener('submit', addNewChord)
 dropDwn.addEventListener('submit', randomizeChords)
 
 
