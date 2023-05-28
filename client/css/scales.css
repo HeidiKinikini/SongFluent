@@ -2,11 +2,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 
 body, html {
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -64,4 +68,131 @@ nav{
 .link:hover{
     color: var(--color1);
 }
+
+.save-chord-card {
+    height: auto;
+    width: auto;
+    margin-top: 2%;
+    border-radius: 5%;
+    background-color: var(--color1);
+}
+
+.no-saved-text {
+    text-align: center;
+    margin-top: 48%;
+}
+
+.dropdown-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choose-genre-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+#dropdown-genre{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+    margin: var(--pagefont);
+
+
+    
+}
+select{
+    width: 10rem;
+    background-color: var(--color2);
+    color: var(--color5);
+    border: 2px solid var(--color5);
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+input{
+    padding: 5px;
+    border: 2px solid var(--color5);
+    color: var(--color5);
+    background-color: var(--color2);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input:hover{
+    background-color: var(--color3);
+}
+.card{
+    height: calc(4rem + 6vw);
+    width: auto;
+    background-color: var(--color1);
+    margin: calc(.5rem + 1vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Josefin Sans';
+    font-size: var(--pagefont);
+    padding: 5px;
+    border: 2px solid var(--color5);
+    position: relative;
+    
+    
+
+}
+.delete-button{
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    position: relative;
+    height: auto;
+    width: auto;
+    font-size: calc(.5rem + 1vw);
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin: 5px;
+    cursor: pointer;
+    color: var(--color5);
+
+}
+.delete-button:hover{
+    color: grey;
+}
+.saved-elem{
+    height: auto;
+    width: 70%;
+    background-color: var(--color1);
+    margin: calc(.5rem + 1vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Josefin Sans';
+    font-size: var(--pagefont);
+    padding: 5px;
+    border: 2px solid var(--color5);
+    position: relative;
+
+}
+#saved{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+
+
+
+
 

@@ -1,9 +1,13 @@
 
+
 const dropDwn2 = document.getElementById('second-form')
 const addChord = document.getElementById('addChord')
 const dropDwn = document.getElementById('dropdown');
 const output = document.getElementById('output');
 const clearAll = document.getElementById('clear-all')
+const saveButton = document.getElementById('save-button')
+
+
 
 
 
@@ -11,7 +15,13 @@ const clearAll = document.getElementById('clear-all')
 const deleteChord = (e) => {
     e.preventDefault();
     e.target.parentNode.remove()
+    if(output.textContent === '') {
+        saveButton.style.visibility = 'hidden'
+        clearAll.style.visibility = 'hidden'
+    }
 }
+
+
 function randomizeChords (e) {
     e.preventDefault()
     output.textContent =''
@@ -31,6 +41,11 @@ function randomizeChords (e) {
         
          }
         })
+
+        
+            saveButton.style.visibility = 'visible'
+            clearAll.style.visibility = 'visible'
+        
 
 
         let counter = 0
@@ -54,14 +69,13 @@ function randomizeChords (e) {
 
 function addNewChord(e) {
     e.preventDefault()
-    createCard(addChord.value)
-    
-
-    
+    createCard(addChord.value) 
 }
 
 function clearAllChords() {
     output.textContent = ''
+    saveButton.style.visibility = 'hidden'
+    clearAll.style.visibility = 'hidden'
 }
 
 const createCard = (chord) => {
@@ -77,10 +91,45 @@ const createCard = (chord) => {
     deleteBtn.classList.add('delete-button')
 }
 
+function makeid(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
 
+console.log(makeid(10))
+
+const saveChordProg = (e) => {
+
+    e.preventDefault()
+    
+    let chordsArray = []
+    for(let i = 0 ; i < output.children.length; i++) {
+        chordsArray.push(output.children[i].firstChild.textContent)
+
+        
+        
+    }
+    sessionStorage.setItem(`${makeid(10)}`, chordsArray)
+    chordsArray = ''
+    
+} 
+
+
+
+
+
+
+
+saveButton.addEventListener('click', saveChordProg)
 clearAll.addEventListener('click', clearAllChords)
 dropDwn2.addEventListener('submit', addNewChord)
 dropDwn.addEventListener('submit', randomizeChords)
-
 
 

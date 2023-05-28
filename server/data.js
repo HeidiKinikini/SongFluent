@@ -80,14 +80,3 @@ module.exports = {
     ]
 }
 
-let bMajScale = [
-
-]
-
-let dMajScale = [
-
-]
-
-let eMajScale = [
-
-]

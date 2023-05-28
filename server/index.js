@@ -3,7 +3,7 @@ const cors = require('cors')
 
 const {PORT} = require('dotenv').config()
 
-const {getScale} = require('./controller')
+const {getScale, chooseGenre} = require('./controller')
 const app = express()
 
 
@@ -11,6 +11,8 @@ app.use(express.json())
 app.use(cors())
 
 app.get(`/api/getScales/:scale`, getScale)
+app.get('/api/chooseGenre/:genre', chooseGenre)
+
 
 
 
