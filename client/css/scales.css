@@ -91,20 +91,20 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    
+    
 }
 #dropdown-genre{
     display: flex;
-    justify-content: space-around;
-    gap: 1rem;
+    justify-content: center;
+    width: 100vw;
+    gap: calc(.5rem + 1vw);
     align-items: center;
-    margin: var(--pagefont);
-
-
-    
+    margin-top: calc(.5rem + 1vw);
 }
+
 select{
-    width: 10rem;
+    width: 5rem;
     background-color: var(--color2);
     color: var(--color5);
     border: 2px solid var(--color5);
@@ -113,7 +113,7 @@ select{
     
 }
 
-input{
+input, button{
     padding: 5px;
     border: 2px solid var(--color5);
     color: var(--color5);
@@ -121,10 +121,11 @@ input{
     cursor: pointer;
     border-radius: 5px;
 }
-
-input:hover{
+input,button:hover{
     background-color: var(--color3);
 }
+
+
 .card{
     height: calc(4rem + 6vw);
     width: auto;
@@ -144,23 +145,23 @@ input:hover{
     
 
 }
-.delete-button{
+.delete-button, #delete-button{
     background: transparent;
     border: none;
     font-weight: bold;
     position: relative;
     height: auto;
-    width: auto;
+    width: fit-content;
     font-size: calc(.5rem + 1vw);
     top: 0;
     left: 0;
     position: absolute;
     margin: 5px;
     cursor: pointer;
-    color: var(--color5);
+    color: var(--opaqueblack);
 
 }
-.delete-button:hover{
+.delete-button, #delete-button:hover{
     color: grey;
 }
 .saved-elem{
@@ -175,7 +176,7 @@ input:hover{
     text-align: center;
     font-family: 'Josefin Sans';
     font-size: var(--pagefont);
-    padding: 5px;
+    padding: 50px 5px;
     border: 2px solid var(--color5);
     position: relative;
 
@@ -189,6 +190,37 @@ input:hover{
     flex-direction: column;
     
 }
+.saved-progs {
+    height: calc(4rem + 6vw);
+    width: 70vw;
+    background-color: var(--color1);
+    margin: calc(.5rem + 1vw);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    gap: calc(.5rem + 1vw);
+    font-family: 'Josefin Sans';
+    font-size: var(--pagefont);
+    padding: calc(.5rem + 1vw);
+    border: 2px solid var(--color5);
+    position: relative;
+    flex-wrap:wrap;
+
+}
+li{
+    width: 20%;
+}
+.chord{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: calc(.5rem + 1vw);
+
+}
+
 
 
 
